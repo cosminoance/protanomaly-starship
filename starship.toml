@@ -1,0 +1,429 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "warm_accessible"
+
+format = """
+[░▒▓](fg:p_start)$os[](fg:p_start_1 bg:p_mid)$directory[](fg:p_mid bg:p_mid_1)[]\
+(fg:p_mid_1 bg:p_end)$git_branch$git_status[](fg:p_end bg:p_end_1)[]\
+(fg:p_end_1 bg:p_cyan)$nodejs\
+$c$cpp$zig$cmake\
+$terraform$gcloud$aws$golang\
+$java$kotlin$scala\
+$json$typescript\
+$bun$rust$php$python[](fg:p_cyan bg:p_cyan_1)[]\
+(fg:p_cyan_1 bg:p_amber)$time[](fg:p_amber bg:p_amber_1)[](fg:p_amber_1 bg:p_bg_dark)\
+\n$character"""
+
+[aws]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[azure]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[os]
+style = "bg:p_start fg:p_bg_dark bold"
+format = "[ $symbol]($style)"
+disabled = false
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:p_amber fg:p_bg_dark bold"
+format = '[  $time ]($style)'
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+[buf]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[bun]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[c]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[cpp]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[cmake]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[cobol]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[conda]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[container]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[crystal]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[dart]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[deno]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[direnv]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[directory]
+read_only = " 󰌾"
+style = "fg:p_bg_dark bg:p_mid bold"
+format = "[ $path]($style)"
+truncation_length = 50
+truncate_to_repo = false
+truncation_symbol = "…/"
+[docker_context]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[dotnet]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[elixir]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[elm]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[erlang]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[fennel]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[fortran]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[fossil_branch]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[gcloud]
+symbol = "󱇶 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[gleam]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[git_branch]
+format = '[[ $symbol$branch ](fg:p_bg_dark bg:p_end bold)]($style)'
+style = "bg:p_end fg:p_bg_dark bold"
+symbol = " "
+[git_status]
+style = "bg:p_end fg:p_bg_dark bold"
+format = '[[($all_status$ahead_behind)](fg:p_bg_dark bg:p_end bold)]($style)'
+[git_commit]
+tag_symbol = '  '
+[golang]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[gradle]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[guix_shell]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[haskell]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[haxe]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[helm]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[hg_branch]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[hostname]
+ssh_symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[java]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[julia]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[kotlin]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[kubernetes]
+symbol = "󱃾 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[lua]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[maven]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[memory_usage]
+symbol = "󰍛 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[meson]
+symbol = "󰔷 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[mojo]
+symbol = "󰈸 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[nats]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[netns]
+symbol = "󰛳 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[nim]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[nix_shell]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[nodejs]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[ocaml]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[odin]
+symbol = "󰟢 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[opa]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[openstack]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[os.symbols]
+AIX = " "
+AlmaLinux = " "
+Alpaquita = " "
+Alpine = " "
+ALTLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+Bluefin = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = " "
+InstantOS = " "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = " "
+OpenCloudOS = " "
+openEuler = " "
+openSUSE = " "
+OracleLinux = "󰺡 "
+PikaOS = " "
+Pop = " "
+Raspbian = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+Redox = "󰀘 "
+RockyLinux = " "
+Solus = " "
+SUSE = " "
+Ubuntu = " "
+Ultramarine = " "
+Unknown = " "
+Uos = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+[package]
+symbol = "󰏗 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[perl]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[php]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[pijul_channel]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[pixi]
+symbol = "󰏗 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[pulumi]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[purescript]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[python]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[raku]
+symbol = "󱖊 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[red]
+symbol = "󱍼 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[rlang]
+symbol = "󰟔 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[ruby]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[rust]
+symbol = "󱘗 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[scala]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[shlvl]
+symbol = "󰹍 "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[singularity]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[solidity]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[spack]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[status]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[sudo]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[swift]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[terraform]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[vlang]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[typst]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[vagrant]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[xmake]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+[zig]
+symbol = " "
+style = "bg:p_cyan fg:p_bg_dark bold"
+format = '[[ $symbol ($version) ](fg:p_bg_dark bg:p_cyan bold)]($style)'
+
+
+[palettes.warm_accessible]
+p_start    = "#9F7887" # muted dusty rose
+p_start_1  = "#947A82"
+p_mid      = "#8F9F78" # muted sage
+p_mid_1    = "#8A9278"
+p_end      = "#B77A4F" # muted warm orange
+p_end_1    = "#A8744F"
+p_cyan     = "#7FA8A8" # muted blue-green
+p_cyan_1   = "#789292"
+p_amber    = "#B89A68" # muted warm amber
+p_amber_1  = "#9A815D"
+p_bg_dark  = "#1a1a1a" # neutral near-black (was "warm dark brown" #241919)
+p_fg       = "#F1E9DF" # warm light foreground
