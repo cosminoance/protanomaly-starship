@@ -1,6 +1,11 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# Active theme. Both palettes are defined at the bottom of this file; swap
+# this one line (and reload the shell) to switch. "warm_accessible" is the
+# original PixelDrama ProtAnomaly; "xray" is the grayscale variant that
+# matches waybar's style.xray.css and wezterm's p_xray chrome.
 palette = "warm_accessible"
+# palette = "xray"
 
 format = """
 [░▒▓](fg:p_start)$os[](fg:p_start_1 bg:p_mid)$directory[](fg:p_mid bg:p_mid_1)[]\
@@ -11,7 +16,7 @@ $terraform$gcloud$aws$golang\
 $java$kotlin$scala\
 $json$typescript\
 $bun$rust$php$python[](fg:p_cyan bg:p_cyan_1)[]\
-(fg:p_cyan_1 bg:p_amber)$time[](fg:p_amber bg:p_amber_1)[](fg:p_amber_1 bg:p_bg_dark)\
+(fg:p_cyan_1 bg:p_amber)$time[](fg:p_amber bg:p_amber_1)[](fg:p_amber_1)\
 \n$character"""
 
 [aws]
@@ -427,3 +432,21 @@ p_amber    = "#B89A68" # muted warm amber
 p_amber_1  = "#9A815D"
 p_bg_dark  = "#1a1a1a" # neutral near-black (was "warm dark brown" #241919)
 p_fg       = "#F1E9DF" # warm light foreground
+
+# Grayscale variant -- same slot names, so every format string above is
+# untouched. Shades are waybar's style.xray.css zones verbatim, and identical
+# to wezterm.lua's p_xray table. Not the ground truth for either (that is
+# wezterm.lua); kept in sync by hand, like the warm palette above.
+[palettes.xray]
+p_start    = "#6E6E6E" # zone 1
+p_start_1  = "#5C5C5C" # zone 1 dim
+p_mid      = "#8F8F8F" # zone 2
+p_mid_1    = "#7A7A7A" # zone 2 dim
+p_end      = "#F0F0F0" # zone 4 -- near-white, the brightest segment
+p_end_1    = "#D4D4D4" # zone 4 dim
+p_cyan     = "#B8B8B8" # zone 3
+p_cyan_1   = "#A0A0A0" # zone 3 dim
+p_amber    = "#D4D4D4" # zone 4 dim
+p_amber_1  = "#B8B8B8" # zone 3
+p_bg_dark  = "#0A0A0A" # near-black, used as fg on the lit segments
+p_fg       = "#E8E8E8" # off-white idle text
